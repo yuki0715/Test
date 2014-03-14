@@ -22,6 +22,9 @@
 		B60D45CA1809AA3C005EE5AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60D45A91809AA3C005EE5AF /* UIKit.framework */; };
 		B60D45D21809AA3C005EE5AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B60D45D01809AA3C005EE5AF /* InfoPlist.strings */; };
 		B60D45D41809AA3C005EE5AF /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B60D45D31809AA3C005EE5AF /* TestTests.m */; };
+		B6C1609B1835E16200A49DE2 /* AddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C1609A1835E16200A49DE2 /* AddToDoItemViewController.m */; };
+		B6C1609E1835E23600A49DE2 /* ToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C1609D1835E23600A49DE2 /* ToDoListViewController.m */; };
+		B6C160A11835E3C800A49DE2 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C160A01835E3C800A49DE2 /* ToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,12 @@
 		B60D45CF1809AA3C005EE5AF /* TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestTests-Info.plist"; sourceTree = "<group>"; };
 		B60D45D11809AA3C005EE5AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B60D45D31809AA3C005EE5AF /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
+		B6C160991835E16200A49DE2 /* AddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToDoItemViewController.h; sourceTree = "<group>"; };
+		B6C1609A1835E16200A49DE2 /* AddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToDoItemViewController.m; sourceTree = "<group>"; };
+		B6C1609C1835E23600A49DE2 /* ToDoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListViewController.h; sourceTree = "<group>"; };
+		B6C1609D1835E23600A49DE2 /* ToDoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewController.m; sourceTree = "<group>"; };
+		B6C1609F1835E3C800A49DE2 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDoItem.h; path = ../ToDoItem.h; sourceTree = "<group>"; };
+		B6C160A01835E3C800A49DE2 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDoItem.m; path = ../ToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +123,15 @@
 		B60D45AB1809AA3C005EE5AF /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				B6C1609F1835E3C800A49DE2 /* ToDoItem.h */,
+				B6C160A01835E3C800A49DE2 /* ToDoItem.m */,
 				B60D45B41809AA3C005EE5AF /* AppDelegate.h */,
 				B60D45B51809AA3C005EE5AF /* AppDelegate.m */,
 				B60D45B71809AA3C005EE5AF /* Main_iPhone.storyboard */,
+				B6C1609C1835E23600A49DE2 /* ToDoListViewController.h */,
+				B6C1609D1835E23600A49DE2 /* ToDoListViewController.m */,
+				B6C160991835E16200A49DE2 /* AddToDoItemViewController.h */,
+				B6C1609A1835E16200A49DE2 /* AddToDoItemViewController.m */,
 				B60D45BA1809AA3C005EE5AF /* Main_iPad.storyboard */,
 				B60D45BD1809AA3C005EE5AF /* ViewController.h */,
 				B60D45BE1809AA3C005EE5AF /* ViewController.m */,
@@ -253,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C160A11835E3C800A49DE2 /* ToDoItem.m in Sources */,
 				B60D45BF1809AA3C005EE5AF /* ViewController.m in Sources */,
+				B6C1609E1835E23600A49DE2 /* ToDoListViewController.m in Sources */,
 				B60D45B61809AA3C005EE5AF /* AppDelegate.m in Sources */,
 				B60D45B21809AA3C005EE5AF /* main.m in Sources */,
+				B6C1609B1835E16200A49DE2 /* AddToDoItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +414,7 @@
 				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
 				INFOPLIST_FILE = "Test/Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,6 +428,7 @@
 				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
 				INFOPLIST_FILE = "Test/Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +494,7 @@
 				B60D45D91809AA3C005EE5AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B60D45DA1809AA3C005EE5AF /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +503,7 @@
 				B60D45DC1809AA3C005EE5AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
